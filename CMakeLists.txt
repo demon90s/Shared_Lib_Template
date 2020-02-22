@@ -12,12 +12,6 @@ file(GLOB_RECURSE SRC_FILES
     ${PROJECT_SOURCE_DIR}/src/*.cpp
     ${PROJECT_SOURCE_DIR}/include/*.hpp)
 
-add_definitions(-D ${PREDIFINE_MACRO})
-
-if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    # Linux
-elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
-    # Windows
-endif()
+add_definitions(-D${PREDIFINE_MACRO})
 
 add_library(${LIBNAME} SHARED ${SRC_FILES})
