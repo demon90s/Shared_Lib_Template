@@ -1,4 +1,4 @@
-#include "func.hpp"
+#include "lib/func.hpp"
 #include <iostream>
 
 void print(const char *msg)
