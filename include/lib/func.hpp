@@ -1,13 +1,15 @@
 #pragma once
 
-#ifdef _MSC_VER
-#ifdef FUNC_EXPORTS
-#define FUNC_API __declspec( dllexport )
-#else
-#define FUNC_API __declspec( dllimport )
-#endif
-#else
-#define FUNC_API
-#endif
+#include "core.hpp"
 
-FUNC_API void print(const char *msg);
+LIB_API void print(const char *msg);
+
+#include <cstdio>
+class LIB_API Application
+{
+public:
+    void Run()
+    {
+        printf("App run.\n");
+    }
+};

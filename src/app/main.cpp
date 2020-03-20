@@ -3,4 +3,7 @@
 int main()
 {
     print("hello shared_lib_template\n");
+
+    Application app;
+    app.Run();
 }
